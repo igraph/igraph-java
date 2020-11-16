@@ -37,6 +37,8 @@ or finish it completely.
 #include <igraph/igraph.h>
 #include <string.h>          /* strlen */
 
+#include "net_sf_igraph_Graph.h"
+
 /************************** STATIC VARIABLES ***************************/
 
 static JavaVM *jvm;

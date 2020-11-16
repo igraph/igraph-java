@@ -26,7 +26,7 @@
 
 	<!-- External tools -->
 	<property name="python.executable" value="python" />
-	<property name="stimulus.script" location="../../tools/stimulus.py" />
+	<property name="stimulus.script" location="src/python/stimulus.py" />
 	
 	<!-- Other configuration stuff -->
 	<property name="libtype" value="shared" />
@@ -45,8 +45,12 @@
 	<path id="jni.include.path">
 		<pathelement path="${java.home}/include" />
 		<pathelement path="${java.home}/include/linux" />
+		<pathelement path="${java.home}/include/darwin" />
+		<pathelement path="${java.home}/include/win32" />
 		<pathelement path="${java.home}/../include" />
 		<pathelement path="${java.home}/../include/linux" />
+		<pathelement path="${java.home}/../include/darwin" />
+		<pathelement path="${java.home}/../include/win32" />
 	</path>
 
 	<property name="generated.enum.classes" value="Connectedness NeighborMode StarMode" />
@@ -88,7 +92,7 @@
 		<exec executable="${python.executable}" failonerror="true">
 			<arg value="${stimulus.script}" />
 			<arg value="-f" />
-			<arg value="../functions.def" />
+			<arg value="etc/functions.def" />
 			<arg value="-i" />
 			<arg value="${src}/java/Graph.java.in" />
 			<arg value="-o" />
@@ -127,7 +131,7 @@
 		<exec executable="${python.executable}" failonerror="true">
 			<arg value="${stimulus.script}" />
 			<arg value="-f" />
-			<arg value="../functions.def" />
+			<arg value="etc/functions.def" />
 			<arg value="-i" />
 			<arg value="${src}/c/${package.underscored.name}_Graph.c.in" />
 			<arg value="-o" />

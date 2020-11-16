@@ -21,3 +21,18 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+
+# Python compiled sources
+*.pyc
+
+# generated source
+src/c/config.h
+src/c/net_sf_igraph_Graph.c
+src/c/net_sf_igraph_Graph.h
+src/java/Connectedness.java
+src/java/NeighborMode.java
+src/java/StarMode.java
+
+# build folder
+build/
+
